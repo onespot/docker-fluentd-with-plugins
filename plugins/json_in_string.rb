@@ -7,6 +7,7 @@ module Fluent
             Plugin.register_parser("json_in_string", self)
 
             config_param :time_format, :string, :default => nil # time_format is configurable
+            config_param :time_key, :string, :default => 'time' # time_key is configurable
 
             def configure(conf)
                 super
@@ -19,7 +20,7 @@ module Fluent
             def parse(text)
                 begin
                     hash = JSON.parse(text)
-                    time = @time_parser.parse(hash['timestamp'])
+                    time = @time_parser.parse(hash[@time_key])
                     yield time, hash
                 rescue
                     yield text
