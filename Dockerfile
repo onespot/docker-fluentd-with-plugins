@@ -11,6 +11,7 @@ RUN apk add --update --virtual .build-deps \
         fluent-plugin-datadog \
         fluent-plugin-loggly \
         fluent-plugin-s3 \
+        fluent-plugin-forest \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /var/cache/apk/* \
