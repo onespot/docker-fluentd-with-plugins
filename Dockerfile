@@ -11,6 +11,8 @@ RUN apk add --update --virtual .build-deps \
         fluent-plugin-datadog:0.9.5 \
         fluent-plugin-loggly:0.0.9 \
         fluent-plugin-forest:0.3.3 \
+        fluent-plugin-input-gelf:0.2.0 \
+        fluent-plugin-record-modifier:0.6.0 \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /var/cache/apk/* \
