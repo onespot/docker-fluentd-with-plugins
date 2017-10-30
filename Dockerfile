@@ -13,6 +13,7 @@ RUN apk add --update --virtual .build-deps \
         fluent-plugin-forest:0.3.3 \
         fluent-plugin-input-gelf:0.2.0 \
         fluent-plugin-record-modifier:0.6.0 \
+        fluent-plugin-rewrite-tag-filter:1.5.6 \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /var/cache/apk/* \
