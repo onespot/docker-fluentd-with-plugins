@@ -15,6 +15,8 @@ RUN apk add --update --virtual .build-deps \
         fluent-plugin-record-modifier:0.6.0 \
         fluent-plugin-rewrite-tag-filter:1.5.6 \
         fluent-plugin-route:0.2.0 \
+        fluent-plugin-concat:1.0.0 \
+        fluent-plugin-docker-format:0.2.3 \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
  && rm -rf /var/cache/apk/* \
